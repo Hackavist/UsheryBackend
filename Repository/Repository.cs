@@ -33,8 +33,7 @@ namespace Repository
 
         public virtual T Get(int id)
         {
-            var result = GetAll().Where(e => e.Id == id).FirstOrDefault();
-            return result;
+            return GetAll().Where(e => e.Id == id).FirstOrDefault();
         }
 
         public virtual async Task Insert(T entity)
